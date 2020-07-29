@@ -1,5 +1,15 @@
 <template>
-  <div>
-    <h1>後台-登入</h1>
-  </div>
+    <div>
+<H1>LOGIN</H1>
+    </div>
 </template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+
+</style>

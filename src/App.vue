@@ -3,12 +3,12 @@
     <div id="nav">
       <router-link to="/">Home/首頁</router-link>|
       <router-link to="/about">About/關於我們</router-link>|
-      <router-link to="/products">Products/產品列表</router-link>|
+      <router-link to="/products">Products/產品列表 </router-link>|
       <router-link to="/cart">Cart/購物車</router-link>|
       <router-link to="/bill">Bill/結帳</router-link>|
       <router-link to="/dashboardlogin">到後台</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
