@@ -33,6 +33,11 @@ const routes = [
     name: 'bill',
     component: () => import('../views/Bill.vue'),
   },
+  {
+    path: '/dashboardlogin',
+    name: 'dashboardlogin',
+    component: () => import('../views/Dashboardlogin.vue'),
+  },
 ];
 
 const router = new VueRouter({
