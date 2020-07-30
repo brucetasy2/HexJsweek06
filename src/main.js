@@ -1,7 +1,12 @@
 import Vue from 'vue';
+import axios from 'axios';
+import $ from 'jquery';
 import App from './App.vue';
 import router from './router';
+import 'bootstrap';
 
+Vue.prototype.$http = axios;
+Vue.prototype.$jq = $;
 Vue.config.productionTip = false;
 
 new Vue({

@@ -19,7 +19,7 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'linebreak-style': 'on',    // 强制执行一致的换行样式，windows(crlf) 和mac(lf)
+    'linebreak-style': 0,    // 强制执行一致的换行样式，windows(crlf) 和mac(lf)  0 = off, 1 = warn, 2 = error 
     'import/extensions': 'off', // 取消對副檔名的驗證
   },
 };

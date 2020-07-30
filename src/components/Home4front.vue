@@ -1,11 +1,11 @@
 <template>
-  <div class='AVC'>
+  <div class="AVC">
     <h1>前台-首頁</h1>
   </div>
 </template>
 <script>
 export default {
-  name: 'home4front',
+  name: 'Home4front',
 };
 </script>
 
