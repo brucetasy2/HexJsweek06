@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <home4front />
+    <div id="nav">
+      <router-link to="/">
+        Home/首頁
+      </router-link>|
+      <router-link to="/about">
+        About/關於我們
+      </router-link>|
+      <router-link to="/products">
+        Products/產品列表
+      </router-link>|
+      <router-link to="/cart">
+        Cart/購物車
+      </router-link>|
+      <router-link to="/bill">
+        Bill/結帳
+      </router-link>|
+      <router-link to="/Dashboard">
+        到後台
+      </router-link>
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import home4front from '@/components/Home4front.vue';
 
 export default {
   name: 'Home',
-  components: {
-    home4front,
+  data() {
+    return {
+    };
   },
 };
 </script>
