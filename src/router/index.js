@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-// import Home from '../views/front/Home.vue';
 
 Vue.use(VueRouter);
 
@@ -22,6 +21,11 @@ const routes = [
         path: '/products',
         name: 'products',
         component: () => import('../views/front/Products.vue'),
+      },
+      {
+        path: '/product/:id',
+        name: 'product',
+        component: () => import('../views/front/Product.vue'),
       },
       {
         path: '/cart',

@@ -89,9 +89,9 @@ export default {
     login() {
       // 進行驗證
       const api = `${process.env.VUE_APP_APIPATH}auth/login`;
-      console.log(`this.user=${this.user.email}`);
-      console.log(`this.user=${this.user.password}`);
-      console.log(`this.token=${this.token}`);
+      // console.log(`this.user=${this.user.email}`);
+      // console.log(`this.user=${this.user.password}`);
+      // console.log(`this.token=${this.token}`);
       this.$http
         .post(api, this.user)
         .then((response) => {
