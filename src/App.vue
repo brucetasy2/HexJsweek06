@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <h4>Here Change Down</h4>
     <router-view />
-    <h4>Here Change Up</h4>
   </div>
 </template>
 

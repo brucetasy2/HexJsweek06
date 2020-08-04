@@ -28,6 +28,35 @@ export default {
       checkSuccess: false,
     };
   },
+  created() {
+    this.CheckLoginStatus(); // 是否已經登錄
+  },
+  methods: {
+    CheckLoginStatus() {
+      this.token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
+      // 檢查 token 是否為有效狀態 ，過期 或 被註銷 ??
+      console.log(`CheckLoginStatus=${this.token}`);
+      if (this.token === '') {
+        console.log('CheckLoginStatus= lost token');
+        this.$router.push('/login');
+      }
+      // axios 預設值
+      this.$http.defaults.headers.common.Authorization = `Bearer ${this.token}`;
+      const api = `${process.env.VUE_APP_APIPATH}auth/check`;
+
+      this.$http
+        .post(api, { api_token: this.token })
+        .then((response) => {
+          // console.log(`response ${response}`);
+          if (response.data.success) {
+            this.checkSuccess = true;
+          }
+        })
+        .catch(() => {
+          this.$router.push('/login');
+        });
+    },
+  },
 };
 </script>
 

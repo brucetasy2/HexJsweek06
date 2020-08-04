@@ -40,6 +40,10 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/login',
+    component: () => import('../views/dashboard/Login.vue'),
+  },
   // 巢狀路由
   {
     path: '/admin',
