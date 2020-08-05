@@ -2,18 +2,41 @@
   <div class="products">
     <Loading :active.sync="isLoading" />
     <h1>前台-產品列表</h1>
-    <table>
-      <tr
-        v-for="item in products"
-        :key="item.id"
-      >
-        <td>category : {{ item.category }}</td>
-        <td>title : {{ item.title }}</td>
-        <td>content: {{ item.content }}</td>
-        <router-link :to="`/product/${item.id}`">
-          看產品
-        </router-link>
-      </tr>
+
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">
+            category
+          </th>
+          <th scope="col">
+            title
+          </th>
+          <th scope="col">
+            content
+          </th>
+          <th scope="col">
+            link
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="item in products"
+          :key="item.id"
+        >
+          <th scope="row">
+            {{ item.category }}
+          </th>
+          <td>{{ item.title }}</td>
+          <td>{{ item.content }}</td>
+          <td>
+            <router-link :to="`/product/${item.id}`">
+              看產品
+            </router-link>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>

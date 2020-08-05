@@ -1,8 +1,39 @@
 <template>
-  <div class="about">
+  <div class="mx-auto">
     <Loading :active.sync="isLoading" />
-    <h1>This is 單一產品頁面</h1>
-    <table>
+    <h2>This is 單一產品頁面</h2>
+    <div
+      class="card mx-auto"
+      style="width: 18rem;"
+    >
+      <img
+        :src="product.imageUrl[0]"
+        class="card-img-top"
+        alt="..."
+      >
+      <div class="card-body">
+        <h5 class="card-title">
+          分類:{{ product.category }}
+        </h5>
+        <p class="card-text">
+          內容:{{ product.content }}
+        </p>
+        <p class="card-text">
+          說明:{{ product.description }}
+        </p>
+        <p class="card-text">
+          原價:{{ product.origin_price }}
+        </p>
+        <p class="card-text">
+          特價:{{ product.price }}
+        </p>
+        <a
+          href="#"
+          class="btn btn-primary"
+        >加入購物車</a>
+      </div>
+    </div>
+    <!-- <table>
       <tr>
         <td>category : {{ product.category }}</td>
         <td>title : {{ product.title }}</td>
@@ -10,7 +41,7 @@
         <td>origin_price: {{ product.origin_price }}</td>
         <td>price: {{ product.price }}</td>
       </tr>
-    </table>
+    </table> -->
   </div>
 </template>
 
