@@ -5,7 +5,7 @@
       <router-link to="/admin/">
         後台首頁
       </router-link> |
-      <router-link to="/">
+      <router-link to="/products">
         回到前台
       </router-link> |
       <router-link to="/admin/products">
