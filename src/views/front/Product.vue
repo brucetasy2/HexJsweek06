@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <Loading :active.sync="isLoading" />
     <h1>This is 單一產品頁面</h1>
     <table>
       <tr>
@@ -19,18 +20,22 @@ export default {
   data() {
     return {
       product: {},
+      isLoading: false,
     };
   },
   created() {
     const { id } = this.$route.params;
     const url = `${process.env.VUE_APP_APIPATH}${process.env.VUE_APP_UUID}/ec/product/${id}`;
+    this.isLoading = true;
     this.$http
       .get(url)
       .then((response) => {
         this.product = response.data.data;
+        this.isLoading = false;
       })
       .catch((error) => {
         console.log(error);
+        this.isLoading = false;
       });
   },
 };

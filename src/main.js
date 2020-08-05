@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
 import $ from 'jquery';
 import App from './App.vue';
 import router from './router';
@@ -8,6 +10,9 @@ import 'bootstrap';
 Vue.prototype.$http = axios;
 Vue.prototype.$jq = $;
 Vue.config.productionTip = false;
+
+Vue.component('Loading', Loading);
+Vue.use(Loading);
 
 new Vue({
   router,
