@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d20e872"],{b06d:function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},c=[function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[t("h1",[e._v("後台-Orders")])])}],u={name:"Orders",data:function(){return{}}},a=u,s=t("2877"),d=Object(s["a"])(a,r,c,!1,null,"7def2b08",null);n["default"]=d.exports}}]);
+//# sourceMappingURL=chunk-2d20e872.b2c4c089.js.map
