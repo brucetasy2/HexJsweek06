@@ -10,7 +10,8 @@ const routes = [
     children: [
       {
         path: '',
-        component: () => import('../views/front/Home.vue'),
+        // component: () => import('../views/front/Home.vue'),
+        component: () => import('../views/front/Index.vue'),
       },
       {
         path: '/about',
